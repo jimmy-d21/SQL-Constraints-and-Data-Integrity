@@ -8,3 +8,12 @@ CREATE TABLE customers (
 
 -- Result:
 -- CREATE TABLE
+
+
+-- Example 2 — Inserting Invalid Data into an Unconstrained Table
+-- GOAL: Demonstrate how an unconstrained table accepts completely invalid and useless records.
+INSERT INTO customers (id, name, email)
+VALUES (NULL, NULL, NULL);
+
+-- Result:
+-- INSERT 0 1
