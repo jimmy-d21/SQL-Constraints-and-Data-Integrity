@@ -17,3 +17,18 @@ VALUES (NULL, NULL, NULL);
 
 -- Result:
 -- INSERT 0 1
+
+
+-- Example 3 — Creating a Table With basic Constraints
+-- GOAL: Recreate the customers table with constraints that enforce mandatory fields and unique values.
+DROP TABLE IF EXISTS customers;
+
+CREATE TABLE customers (
+    id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE
+);
+
+-- Result:
+-- DROP TABLE
+-- CREATE TABLE
